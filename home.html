@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Homepage</title>
+    <style>
+        /* Basic styling only */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #ff00ea;
+            padding: 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        main {
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        footer {
+            background-color: #230e81;
+            color: rgb(194, 194, 212);
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .box {
+            background-color: #359c20;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .extra-content {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .extra-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .extra-content ul {
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+        
+        .extra-content li {
+            margin: 8px 0;
+        }
+        
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="aboutLink">About</a>
+            <a href="#" id="contactLink">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="pageTitle">Hi, I'm Limajayasri</h1>
+        <p>Computer Science Student | Web Developer</p>
+        
+        <div id="infoBox" class="box">
+            <p>I'm passionate about coding and creating websites. Currently learning web development.</p>
+            <p>Email: Limajayasri@student.edu</p>
+        </div>
+        
+        <button id="clickBtn">Click Me</button>
+        
+        <!-- Added extra content below -->
+        <div class="extra-content">
+            <h3>📚 My Current Learning Journey</h3>
+            <ul>
+                <li>✅ HTML & CSS - Building responsive websites</li>
+                <li>✅ JavaScript - Adding interactivity to web pages</li>
+                <li>🔄 React.js - Learning frontend framework</li>
+                <li>🔄 Php - Backend development</li>
+            </ul>
+            
+            <h3>🎯 My Goals for 2024</h3>
+            <ul>
+                <li>Build 5 complete web projects</li>
+                <li>Contribute to open source</li>
+                <li>Learn Python for data science</li>
+                <li>Get an internship as a web developer</li>
+            </ul>
+            
+            <h3>💻 My Favorite Projects</h3>
+            <ul>
+                <li>Personal Portfolio Website - Showcase my work</li>
+                <li>To-Do List App - JavaScript practice project</li>
+                <li>Weather App - Using API integration</li>
+                <li>Blog Platform - Full-stack project</li>
+            </ul>
+            
+            <h3>📖 Fun Facts About Me</h3>
+            <ul>
+                <li>I love coffee ☕ and coding at night</li>
+                <li>I enjoy hiking and nature photography</li>
+                <li>I speak 3 languages: English, Spanish, and JavaScript 😄</li>
+                <li>My favorite book is "Clean Code" by Robert Martin</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Limajayasri</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Get elements
+        const homeLink = document.getElementById('homeLink');
+        const aboutLink = document.getElementById('aboutLink');
+        const contactLink = document.getElementById('contactLink');
+        const clickBtn = document.getElementById('clickBtn');
+        const infoBox = document.getElementById('infoBox');
+        const pageTitle = document.getElementById('pageTitle');
+        
+        // Home link click
+        homeLink.onclick = function(e) {
+            e.preventDefault();
+            pageTitle.innerHTML = "Hi, I'm Limajayasri";
+            infoBox.innerHTML = "<p>I'm passionate about coding and creating websites. Currently learning web development.</p><p>Email: sarah@student.edu</p>";
+        };
+        
+        // About link click
+        aboutLink.onclick = function(e) {
+            e.preventDefault();
+            pageTitle.innerHTML = "About Me";
+            infoBox.innerHTML = "<p><strong>Education:</strong> Computer Science Student</p><p><strong>Skills:</strong> HTML, CSS, JavaScript</p><p><strong>Goal:</strong> Become a full-stack developer</p>";
+        };
+        
+        // Contact link click
+        contactLink.onclick = function(e) {
+            e.preventDefault();
+            pageTitle.innerHTML = "Contact Me";
+            infoBox.innerHTML = "<p><strong>Email:</strong> sarah@student.edu</p><p><strong>GitHub:</strong> github.com/sarah</p><p>Feel free to reach out!</p>";
+        };
+        
+        // Button click
+        clickBtn.onclick = function() {
+            alert("Hello! Welcome to my page!");
+        };
+    </script>
+
+</body>
+</html>
